@@ -4,9 +4,11 @@ import android.app.Application
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
 import androidx.test.runner.AndroidJUnit4
+import kotlinx.android.extensions.ContainerOptions
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.robolectric.annotation.Config
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -14,6 +16,7 @@ import org.junit.runner.RunWith
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
+@Config(sdk = [28])
 class ExampleUnitTest {
 
     class TestPreference(context: Context): Preference(context) {

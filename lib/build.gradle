@@ -16,6 +16,12 @@ android {
         consumerProguardFiles 'consumer-rules.pro'
     }
 
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
