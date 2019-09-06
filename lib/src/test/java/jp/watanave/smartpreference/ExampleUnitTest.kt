@@ -19,12 +19,19 @@ import org.robolectric.annotation.Config
 @Config(sdk = [28])
 class ExampleUnitTest {
 
+    enum class Size {
+        Small, Middle, Large
+    }
+
     class TestPreference(context: Context): Preference(context) {
         var intValue: Int by notnull(4)
         var intNullableValue: Int? by nullable<Int?>()
 
         var stringValue: String by notnull("hoge")
         var stringNullableValue: String? by nullable<String?>()
+
+        var enumValue: Size by enum(Size.Middle)
+        var enumNullableValue: Size? by nullableEnum<Size?>()
 
         var keyCheck1: String by notnull("hoge")
         var keyCheck2: String by notnull("hoge", "keyCheck1")
@@ -60,6 +67,22 @@ class ExampleUnitTest {
         Assert.assertEquals("poyo", preference.stringNullableValue)
         preference.stringNullableValue = null
         Assert.assertNull(preference.stringNullableValue)
+    }
+
+    @Test
+    fun enum() {
+        val context = getApplicationContext<Application>()
+        val preference = TestPreference(context)
+
+        Assert.assertEquals(Size.Middle, preference.enumValue)
+        preference.enumValue = Size.Small
+        Assert.assertEquals(Size.Small, preference.enumValue)
+
+        Assert.assertNull(preference.enumNullableValue)
+        preference.enumNullableValue = Size.Large
+        Assert.assertEquals(Size.Large, preference.enumNullableValue)
+        preference.enumNullableValue = null
+        Assert.assertNull(preference.enumNullableValue)
     }
 
     @Test
