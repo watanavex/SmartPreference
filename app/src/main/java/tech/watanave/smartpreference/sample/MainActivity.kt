@@ -1,4 +1,4 @@
-package jp.watanave.smartpreference.sample
+package tech.watanave.smartpreference.sample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

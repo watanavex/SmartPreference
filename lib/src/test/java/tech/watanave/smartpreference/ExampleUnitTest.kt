@@ -1,10 +1,9 @@
-package jp.watanave.smartpreference
+package tech.watanave.smartpreference
 
 import android.app.Application
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
 import androidx.test.runner.AndroidJUnit4
-import kotlinx.android.extensions.ContainerOptions
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith

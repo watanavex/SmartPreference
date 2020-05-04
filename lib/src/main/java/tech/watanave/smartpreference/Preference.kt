@@ -1,10 +1,8 @@
-package jp.watanave.smartpreference
+package tech.watanave.smartpreference
 
 import android.content.Context
 import android.content.SharedPreferences
-import androidx.core.content.edit
 import androidx.preference.PreferenceManager
-import kotlin.reflect.KProperty
 
 open class Preference(val sharedPreferences: SharedPreferences) {
 
