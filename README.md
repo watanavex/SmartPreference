@@ -1,5 +1,5 @@
 # SmartPreference
-[![](https://jitpack.io/v/susan335/SmartPreference.svg)](https://jitpack.io/#susan335/SmartPreference)  
+[![](https://jitpack.io/v/watanavex/SmartPreference.svg)](https://jitpack.io/#watanavex/SmartPreference)  
 
 This library makes SharedPreferences convenient.  
 SmartPreference is Type-safety.
@@ -18,7 +18,7 @@ Add it in your root build.gradle at the end of repositories:
 Add the dependency
 ```
 	dependencies {
-	        implementation 'com.github.susan335:SmartPreference:0.0.1'
+	        implementation 'com.github.watanavex:SmartPreference:x.x.x'
 	}
 ```
 
