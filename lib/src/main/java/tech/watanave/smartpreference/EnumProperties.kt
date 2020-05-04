@@ -1,4 +1,4 @@
-package jp.watanave.smartpreference
+package tech.watanave.smartpreference
 
 import android.content.SharedPreferences
 import androidx.core.content.edit

@@ -1,4 +1,4 @@
-package jp.watanave.smartpreference.sample
+package tech.watanave.smartpreference.sample
 
 import org.junit.Test
 
